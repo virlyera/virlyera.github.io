@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kalkulator Suhu</title>
+		<link href="css/style.css" rel="stylesheet">
+	</header>
+	<body>
+		<main>
+		<h1 class="judul">Kalkulator Suhu - Virly Erasthi</h1>
+		<section>
+			<div id="hilang">
+				<p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi <br/>
+				untuk mendapatkan hasil konversi dalam bentuk Farenheit (&deg;F).</p>
+				<form name="message-form" onclick="return validateForm()">
+					<h1>Celcius (&deg;C):</h1><br/>
+					<input id="inputCelcius" type="number" class="form-control" name="celcius"/><br/>
+					<button type="button" id="btnKonversi" class="btn btn-success btn block"
+							onclick="celciusfarenheit()">Konversi
+					</button>
+					<button id="btnReset" class="button-Reset">Reset</button>
+					
+					<br/>
+					<h1>Farenheit (&deg;F):</h1><br/>
+					<input type="text" id="hasilFarenheit" class="form-control" readonly>
+					<br/>
+					<h1>Cara Kalkulasi :</h1><br/>
+					<textarea id="inputKalkulasi" style="height: 70px" readonly></textarea>
+				</form>
+					<h3><b>Cara konversi dari Celcius(&deg;C) ke Farenheit(&deg;F)</b></h3>
+					<p>Suhu dalam derajat Celcius(&deg;F) sama dengan Suhu dalam derajat <br/>
+					Farenheit(&deg;C) kali 9/5 tambah 32.<br/>
+					&deg;F = (&deg;C x 9/5) + 32<br/>
+					atau <br/>
+					&deg;F = (&deg;C x 1,8) + 32</p>
+			</div>
+			<div id="muncul" style="display: none;">
+				<p>Masukkan suhu derajat Farenheit (&deg;F) ke kotak dibawah, lalu klik tombol Konversi<br/>
+				untuk mendapatkan hasil konversi dalam bentuk Celcius (&deg;C).</p>
+				<form>
+					<h1>Farenheit (&deg;F):</h1><br/>
+					<input id="inputFarenheit" type="number" class="form-control" name="farenheit"/><br/>
+					<button type="button" id="btnKonversi2" class="btn btn-success btn block"
+							onclick="farenheitcelcius()">Konversi
+					</button>
+					<button id="btnReset" class="button-Reset">Reset</button>
+					
+					<br/>
+					<h1>Celcius (&deg;C):</h1><br/>
+					<input type="text" id="hasilCelcius" class="form-control" readonly>
+					<br/>
+					<h1>Cara Kalkulasi :</h1><br/>
+					<textarea id="inputKalkulasi2" style="height: 70px" readonly></textarea>
+				</form>
+					<h3><b>Cara konversi dari Farenheit(&deg;F) ke Celcius(&deg;C)</b></h3>
+					<p>Suhu dalam derajat Farenheit(&deg;F) sama dengan Suhu dalam derajat <br/>
+					Celcius(&deg;C) dikurang 32 di kali 5/9.<br/>
+					&deg;C = (&deg;F-32)*5/9<br/>
+					atau <br/>
+					&deg;C = (&deg;F-32)*0.55</p>
+			</div>
+			<button onclick="myFunction()" class="button-Reverse">Reverse</button>
+		</section>
+		</main>
+			<script src="js/script.js"></script>
+	</body>
+</html>
